@@ -3,5 +3,14 @@
     width: 500px; 
     text-align: "center";
     /* display: inline-block; */
+    /* background-image: url("latest.jpeg"); */
     
 }
+
+.dropclass
+{
+    /* background-color: blue; */
+    color:blue; 
+    color-adjust: blue;
+}
+    

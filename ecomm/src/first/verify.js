@@ -25,7 +25,7 @@ function Verifypage()
   
   
 
-  <Link to="/register" ><Button  variant="primary" >VERIFY
+  <Link to="/cardshow" ><Button  variant="primary" >VERIFY
     
   </Button></Link>
 
