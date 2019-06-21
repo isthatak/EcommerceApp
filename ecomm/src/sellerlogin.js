@@ -1,13 +1,13 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "./loginpagecss.css";
-import "./resister.css";
-import Register from "./registerpage";
+import "./first/loginpagecss.css";
+// import "./resister.css";
+// import Register from "./registerpage";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 //import products from "./cardarray";
 
-class  Loginpage extends React.Component
+class  Sellerloginpage extends React.Component
 
 {
   render()
@@ -15,12 +15,11 @@ class  Loginpage extends React.Component
     
     return(
       
- <div className="dropclass"> 
+ <div >
 
      <center>
      <Form className="first">
-      
-         <h1>PLEASE LOGIN HERE</h1>
+         <h1>THIS IS SELLER LOGIN PAGE</h1>
          
   <Form.Group controlId="formBasicEmail">
     <Form.Label>USERNAME:</Form.Label>
@@ -44,7 +43,7 @@ class  Loginpage extends React.Component
   </Button>
   
 
-  <Link to="/register" >
+  <Link to="/sellerregister" >
     <Button   variant="primary" >REGISTER
     
   </Button>
@@ -57,4 +56,4 @@ class  Loginpage extends React.Component
         )
 }
 }
-export default Loginpage;
+export default Sellerloginpage;

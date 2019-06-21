@@ -2,15 +2,25 @@
 {
     width: 500px; 
     text-align: "center";
+    margin-top: 130px;
+   
     /* display: inline-block; */
     /* background-image: url("latest.jpeg"); */
-    
+   
 }
+/* .second
+{
+    background: url(proimgtwo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+} */
+
 
 .dropclass
 {
-    /* background-color: blue; */
-    color:blue; 
+    background-color: blue;
+    background-size: 500px;
+    color:black; 
     color-adjust: blue;
 }
     

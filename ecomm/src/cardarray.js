@@ -17,4 +17,6 @@ const products=[
         button:"buynow"
     }
 ]
+
+
 export default products;

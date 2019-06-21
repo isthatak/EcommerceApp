@@ -9,10 +9,10 @@ function Register()
 {
     return(
       
- <div >
+ <div class="newone">
      <center>
      <Form  className="second">
-         <h1>THIS IS REGISTER PAGE</h1>
+         <h1>PLEASE REGISTER HERE</h1>
 
          <Form.Group controlId="formBasicEmail">
     <Form.Label>NAME</Form.Label>

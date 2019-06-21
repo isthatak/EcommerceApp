@@ -1,13 +1,13 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "./loginpagecss.css";
-import Register from "./registerpage";
-import "./resister.css";
+import "./first/loginpagecss.css";
+// import Register from "./registerpage";
+import "./first/resister.css";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 
-class Verifypage extends React.Component
+class Sellerverifypage extends React.Component
 {
     render()
     {
@@ -17,7 +17,7 @@ class Verifypage extends React.Component
  <div className="newone">
      <center>
      <Form className="first">
-         <h1>THIS IS VERIFY PAGE</h1>
+         <h1>VERIFY SELLER</h1>
          
   <Form.Group controlId="formBasicEmail">
     <Form.Label>VERIFY:</Form.Label>
@@ -30,7 +30,7 @@ class Verifypage extends React.Component
   
   
 
-  <Link to="/mainpage" ><Button  variant="primary" >VERIFY
+  <Link to="/sellingpage" ><Button  variant="primary" >VERIFY
     
   </Button></Link>
 
@@ -41,4 +41,4 @@ class Verifypage extends React.Component
         )
 }
 }
-export default Verifypage;
+export default Sellerverifypage;

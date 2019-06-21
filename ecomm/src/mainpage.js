@@ -6,22 +6,53 @@ import Navbar from "react-bootstrap/Navbar";
 import FormControl from "react-bootstrap/FormControl";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
+import products from "./cardarray";
+import {Grid } from "semantic-ui-react";
 //import ReactBootstrap, {Jumbotron,  Col, Grid, Panel, FormGroup} from 'react-bootstrap';
 //import "./first/loginpagecss.css";
 import "./mainpagecss.css";
+
+// import Cards from "./cardshow";
 //import Register from "./registerpage";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-function Mainpage()
-{
+class Mainpage extends React.Component
+{ 
+  
+  render(){
+    const cards=products.map((data)=>{
+  return(
+    
+<div>
+   
+<Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={data.image} />
+  <Card.Body>
+    <Card.Title>{data.name} {data.price}</Card.Title>
+    <Card.Text>
+   {data.description}
+    </Card.Text>
+    <Button variant="primary">BUYNOW</Button>
+  </Card.Body>
+</Card> 
+
+</div>
+
+  )
+    })
+    
+ console.log("props",this.props.data);
+ 
+  const {data}=this.props
+  console.log(" data is this"+data)
+  
     return(
+     
     
         <div className="body" >
            
-            <center>
-
-            
-       <h1> JASON AND JASON</h1>
-       </center>
+           <center>
+  <h1> JASON AND JASON</h1>
+  </center>
   <Navbar bg="primary" variant="dark">
   <Dropdown className="dropclass" >
   <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -30,19 +61,36 @@ function Mainpage()
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">PROFILE</Dropdown.Item>
+  <Link to="sellherepage">
+    <Button variant="primary">PROFILE</Button>
+    </Link>
     <br>
     </br>
-    <Dropdown.Item href="#/action-2">YOUR ORDERS</Dropdown.Item>
+    <br></br>
+    <Link to="sellherepage">
+    <Button variant="primary">YOUR ORDERS</Button>
+    </Link>
     <br>
     </br>
-    <Dropdown.Item href="#/action-3">JASON PAY</Dropdown.Item>
+    <br></br>
+    <Link to="sellherepage">
+    <Button variant="primary">JASON PAY</Button>
+    </Link>
     <br>
     </br>
-    <Dropdown.Item href="www.facebook.com">SELL HERE</Dropdown.Item>
+    <br></br>
+    <Link to="sellherepage">
+    <Button variant="primary">SELL HERE</Button>
+    </Link>
+    
+    
     <br>
     </br>
-    <Dropdown.Item href="#/action-3">LOGOUT</Dropdown.Item>
+    <br></br>
+    
+    <Link to="sellherepage">
+    <Button variant="primary">LOGOUT</Button>
+    </Link>
   </Dropdown.Menu>
 </Dropdown>
     <Navbar.Brand href="#home">  ECOMM</Navbar.Brand>
@@ -74,80 +122,28 @@ function Mainpage()
     </Form>
     
   </Navbar>
-  <table>
-
-  <tr>
-      <td>
-
-      </td>
-      </tr>
-  <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://pocketnow.com/wp-content/uploads/2019/03/gsmarena_005.jpg" />
-  <Card.Body>
-    <Card.Title>REALME 1 -10,000</Card.Title>
-    <Card.Text>
-    THIS IS A GREAT BUDGET SMART PHONE WITH 4GB RAM AND 64 GB INTERNAL MEMORY.
-      THIS IS A SMART BUY.
-    </Card.Text>
-    <Button variant="primary">BUY NOW</Button>
-  </Card.Body>
-</Card>
-<td>
-    </td>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://pocketnow.com/wp-content/uploads/2019/03/gsmarena_005.jpg" />
-  <Card.Body>
-    <Card.Title>REALME 2  -10,000</Card.Title>
-    <Card.Text>
-    THIS IS A GREAT BUDGET SMART PHONE WITH 4GB RAM AND 64 GB INTERNAL MEMORY.
-      THIS IS A SMART BUY.
-    </Card.Text>
-    <Button variant="primary">BUY NOW</Button>
-  </Card.Body>
-</Card>
-<td>
-    </td>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://pocketnow.com/wp-content/uploads/2019/03/gsmarena_005.jpg" />
-  <Card.Body>
-    <Card.Title>REALME 3   -10,000</Card.Title>
-    <Card.Text>
-    THIS IS A GREAT BUDGET SMART PHONE WITH 4GB RAM AND 64 GB INTERNAL MEMORY.
-      THIS IS A SMART BUY.
-    </Card.Text>
-    <Button variant="primary">BUY NOW</Button>
-  </Card.Body>
-</Card>
-<td>
-    </td>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://pocketnow.com/wp-content/uploads/2019/03/gsmarena_005.jpg" />
-  <Card.Body>
-    <Card.Title>REALME 4  -10,000</Card.Title>
-    <Card.Text>
-    THIS IS A GREAT BUDGET SMART PHONE WITH 4GB RAM AND 64 GB INTERNAL MEMORY.
-      THIS IS A SMART BUY.
-    </Card.Text>
-    <Button variant="primary">BUY NOW</Button>
-  </Card.Body>
-</Card>
-<td>
-    </td>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://pocketnow.com/wp-content/uploads/2019/03/gsmarena_005.jpg" />
-  <Card.Body>
-    <Card.Title>REALME 5   -10,000</Card.Title>
-    <Card.Text>
-      THIS IS A GREAT BUDGET SMART PHONE WITH 4GB RAM AND 64 GB INTERNAL MEMORY.
-      THIS IS A SMART BUY.
-    </Card.Text>
-    <Button variant="primary">BUY NOW</Button>
-  </Card.Body>
-</Card>
-
-
-  </table>
   
+  
+ <Grid columns={2} divided>
+   <Grid.Row>
+      {cards}
+      </Grid.Row>
+      </Grid>
+
+      
+  {/* <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={data.image} />
+  <Card.Body>
+    <Card.Title>{data.name} {data.price}</Card.Title>
+    <Card.Text>
+   {data.description}
+    </Card.Text>
+    <Button variant="primary">BUYNOW</Button>
+  </Card.Body>
+</Card> */}
+
+
+
   
 
   <footer>
@@ -170,5 +166,6 @@ function Mainpage()
   
   </div>
     )
+}
 }
 export default Mainpage;

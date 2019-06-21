@@ -9,6 +9,7 @@ import Card from "react-bootstrap/Card";
 //import ReactBootstrap, {Jumbotron,  Col, Grid, Panel, FormGroup} from 'react-bootstrap';
 import "./first/loginpagecss.css";
 import products from "./cardarray";
+import Mainpage from "./mainpage";
 //import "./resister.css";
 //import Register from "./registerpage";
 class Cards extends React.Component
@@ -17,12 +18,9 @@ class Cards extends React.Component
 
 render()
 {
-const cards=products.map(data=>(
-<Cards data={data}></Cards>
-)
-)
+
 return(<div>
-    {cards}
+    
 </div>
 
 )
